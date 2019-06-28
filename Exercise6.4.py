@@ -1,0 +1,20 @@
+def tester(givenstring = "Too short"):
+    if len(givenstring) < int(10):
+        print("Too short")
+    elif len(givenstring) > int(10) and givenstring.__contains__("X"):
+        print(givenstring)
+        print("X spotted!")
+    else:
+        print(givenstring)
+
+def main():
+    while True:
+        something = input("Write something(quit ends): ")
+        if something == "quit":
+            break
+        else:
+            tester(something)
+    
+if __name__ == "__main__":
+    main()
+
